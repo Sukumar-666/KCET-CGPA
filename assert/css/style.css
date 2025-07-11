@@ -1,0 +1,78 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f0f4f8;
+}
+
+.header {
+  background-color: #1976d2;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+main {
+  max-width: 400px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.welcome-card img.welcome-img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.sem-list button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #555;
+}
+
+
+.cgpaclick{
+  background-color: #555;
+  align-content:center;
+
+}
+ .welcome-img {
+    position: relative;  
+    width: 1000px;        
+    margin: 20px auto;    
+  }
+
+  .welcome-img img{
+    width: 100%;
+    display: inline;
+    border-radius: 8px;   
+  }
