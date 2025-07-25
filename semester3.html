@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semester 3 - GPA Calculator (CSE)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <h2>CSE - Semester 3 GPA Calculator</h2>
+</header>
+<main>
+  <form id="gradesForm">
+    <h3>Enter your grades</h3>
+
+    <div><label>MA2201 Linear Algebra and Boundary Value Problems (4):</label>
+      <select name="MA2201">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>IT2201 Computer Organization and Architecture (3):</label>
+      <select name="IT2201">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>CS2201 Data Structures using Python (3):</label>
+      <select name="CS2201">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>CS2202 Object Oriented Programming using Java (3):</label>
+      <select name="CS2202">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>CS2203 System Software and Operating Systems (3):</label>
+      <select name="CS2203">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>EC2201 Digital System Design and Microprocessors (4):</label>
+      <select name="EC2201">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>Audit Course (0):</label>
+      <select name="Audit">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>CS2204 Data Structures using Python Lab (1):</label>
+      <select name="CS2204">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>EC2202 Digital System Design and Microprocessors Lab (2):</label>
+      <select name="EC2202">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <button type="submit">Calculate GPA</button>
+  </form>
+  <div id="result"></div>
+</main>
+<footer><p>© KCET</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
