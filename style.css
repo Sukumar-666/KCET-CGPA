@@ -66,13 +66,13 @@ footer {
 
 }
  .welcome-img {
-    position: relative;  
-    width: 1000px;        
-    margin: 20px auto;    
+    position: relative;   /* important to position child absolutely */
+    width: 1000px;         /* or any size you want */
+    margin: 20px auto;    /* center on page */
   }
 
   .welcome-img img{
     width: 100%;
     display: inline;
-    border-radius: 8px;   
+    border-radius: 8px;   /* optional: rounded corners */
   }
