@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semester 1 - GPA</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <h2>Semester 1 - GPA Calculator</h2>
+</header>
+<main>
+  <form id="gradesForm">
+    <h3>Enter your grades</h3>
+    <div><label>SH2101 Technical English (3):</label>
+      <select name="SH2101">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>MA2101 Matrices & Diff Calculus (4):</label>
+      <select name="MA2101"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <!-- Add other subjects similarly -->
+    <div><label>PH2101 Engineering Physics (3):</label>
+      <select name="PH2101"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <div><label>GE2101 Principles of Engineering (3):</label>
+      <select name="GE2101"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <div><label>EM2101 Coding Techniques-1 (3):</label>
+      <select name="EM2101"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <div><label>CY2101 Engineering Chemistry (3):</label>
+      <select name="CY2101"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <div><label>GE2102 Heritage of Tamils (1):</label>
+      <select name="GE2102"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <div><label>MA2102 Maths Lab (1):</label>
+      <select name="MA2102"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <div><label>PH2102 Physics Lab (1):</label>
+      <select name="PH2102"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <div><label>EM2102 Coding Techniques 1 Lab (1):</label>
+      <select name="EM2102"><option value="">--Grade--</option><option>O</option><option>A+</option>
+      <option>A</option><option>B+</option><option>B</option><option>RA</option></select></div>
+
+    <button type="submit">Calculate GPA</button>
+  </form>
+  <div id="result"></div>
+</main>
+<footer><p>© KCET</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
+
