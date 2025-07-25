@@ -1,25 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome - KCET GPA Calculator</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scholar Sync: KCET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #3e8eec, #6a82fb);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h2 {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .page {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #3e8eec;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f0f0f0;
+      color: #2c6dd1;
+    }
+
+    #semesters button {
+      display: inline-block;
+      width: 150px;
+    }
+
+    .extras {
+      margin-top: 30px;
+    }
+
+    .extras button {
+      width: 260px;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .cgpa-btn {
+      background-color: blue;
+      color: #333;
+    }
+
+    .cgpa-btn:hover {
+      background-color:wheat;
+      color: #000;
+    }
+  </style>
 </head>
 <body>
-<header class="header">
-  <h1>Hello KCET</h1>
+
+<header>
+  <h2>Scholar Sync-KCET</h2>
 </header>
-<main>
-  <div class="welcome-card">
-    <img src="https://kamarajengg.edu.in/static/images/Logo.svg" alt="Student" class="welcome-img" width="100px">
-    <h2>Welcome to KCET GPA Calculator</h2>
-    <p>Calculate your GPA and CGPA easily</p>
-    <button onclick="location.href='departments.html'">Start</button>
+
+<!-- Page 1: Welcome -->
+<div id="page1" class="page">
+  <h3>Welcome to the GPA & CGPA Calculator</h3>
+  <button onclick="nextPage('page2')">Start</button><br>
+
+  <b><button class="cgpa-btn" onclick="location.href='cgpa.html'">🎓 CGPA Calculator</button></b>
+
+  <div class="extras">
+    <h3>📘 Extra Student Tools</h3>
+    <button onclick="location.href='calender.html'">📅 Academic Calendar</button>
+    <button onclick="location.href='syllabus.html'">📖 View Syllabus</button>
   </div>
-</main>
+</div>
+
+<!-- Page 2: Select Year -->
+<div id="page2" class="page" style="display: none;">
+  <h3>Select Your Year</h3>
+  <button onclick="selectYear(1)">1st Year</button>
+  <button onclick="selectYear(2)">2nd Year</button>
+  <button onclick="selectYear(3)">3rd Year</button>
+  <button onclick="selectYear(4)">4th Year</button>
+</div>
+
+<!-- Page 3: Select Department -->
+<div id="page3" class="page" style="display: none;">
+  <h3>Select Your Department</h3>
+  <button onclick="selectDept('CSE')">CSE</button>
+  <button onclick="comingSoon()">IT</button>
+  <button onclick="comingSoon()">ECE</button>
+  <button onclick="comingSoon()">EEE</button>
+  <button onclick="comingSoon()">MECH</button>
+  <button onclick="comingSoon()">CIVIL</button>
+</div>
+
+<!-- Page 4: Select Semester (for CSE only) -->
+<div id="page4" class="page" style="display: none;">
+  <h3>Select Your Semester</h3>
+  <div id="semesters"></div>
+</div>
+
 <footer>
-  <p>© KCET</p>
+  <p>© KCET | Developed by Sukumar</p>
 </footer>
+
+<script>
+  let selectedYear = 1;
+
+  function nextPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function selectYear(year) {
+    selectedYear = year;
+    nextPage('page3');
+  }
+
+  function selectDept(dept) {
+    if (dept === 'CSE') {
+      const semesterMap = {
+        1: ['Semester 1', 'Semester 2'],
+        2: ['Semester 3', 'Semester 4'],
+        3: ['Semester 5', 'Semester 6'],
+        4: ['Semester 7', 'Semester 8']
+      };
+      const semDiv = document.getElementById('semesters');
+      semDiv.innerHTML = '';
+      semesterMap[selectedYear].forEach((sem, idx) => {
+        const semIndex = (selectedYear - 1) * 2 + idx + 1;
+        const btn = document.createElement('button');
+        btn.innerText = sem;
+        btn.onclick = () => window.location.href = `semester${semIndex}.html`;
+        semDiv.appendChild(btn);
+      });
+      nextPage('page4');
+    }
+  }
+
+  function comingSoon() {
+    alert("Coming soon...");
+  }
+</script>
+
 </body>
 </html>
