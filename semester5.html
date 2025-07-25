@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semester 5 - GPA Calculator (CSE)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <h2>CSE - Semester 5 GPA Calculator</h2>
+</header>
+<main>
+  <form id="gradesForm">
+    <h3>Enter your grades</h3>
+
+    <div><label>CS2301 Internet Programming (3):</label>
+      <select name="CS2301">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>CS2302 Introduction to Internet of Things (3):</label>
+      <select name="CS2302">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>CS2303 Machine Learning Techniques (3):</label>
+      <select name="CS2303">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>CS2304 Networking Essentials (3):</label>
+      <select name="CS2304">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>Professional Elective I (3):</label>
+      <select name="PE1">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>Professional Elective II (3):</label>
+      <select name="PE2">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>CS2305 Computer Networks Laboratory (2):</label>
+      <select name="CS2305">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>CS2306 Internet of Things Laboratory (2):</label>
+      <select name="CS2306">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>CS2307 Internet Programming Laboratory (2):</label>
+      <select name="CS2307">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <div><label>EM2301 Internship (1):</label>
+      <select name="EM2301">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <button type="submit">Calculate GPA</button>
+  </form>
+  <div id="result"></div>
+</main>
+<footer><p>© KCET</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
