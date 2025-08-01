@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ECE - Semester 5 GPA Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h2>ECE - Semester 5 GPA Calculator</h2>
+  </header>
+
+  <main>
+    <form id="gradesForm">
+      <h3>Enter your grades</h3>
+
+      <div><label>EC2301 - Electromagnetic Fields & Transmission Lines (3):</label>
+        <select name="EC2301">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>EC2302 - VLSI Design and Technology (3):</label>
+        <select name="EC2302">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>EC2303 - Wireless Communication (3):</label>
+        <select name="EC2303">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>Professional Elective I (3):</label>
+        <select name="PE1">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>Professional Elective II (3):</label>
+        <select name="PE2">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>Professional Elective III (3):</label>
+        <select name="PE3">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>EC2304 - Advanced Communication Laboratory (2):</label>
+        <select name="EC2304">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>EC2305 - VLSI Design Laboratory (2):</label>
+        <select name="EC2305">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>EM2301 - Internship (1):</label>
+        <select name="EM2301">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <button type="submit">Calculate GPA</button>
+    </form>
+
+    <div id="result"></div>
+  </main>
+
+  <footer><p>© KCET</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semester 6 - GPA Calculator (EEE)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <h2>EEE - Semester 6 GPA Calculator</h2>
+</header>
+<main>
+  <form id="gradesForm">
+    <h3>Enter your grades</h3>
+
+    <div><label>EE2351 Power Electronics (3):</label>
+      <select name="EE2351">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>EE2352 Power System Operation and Control (3):</label>
+      <select name="EE2352">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>Professional Elective IV (3):</label>
+      <select name="PE4">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>Professional Elective V (3):</label>
+      <select name="PE5">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>Professional Elective VI (3):</label>
+      <select name="PE6">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>Open Elective I (3):</label>
+      <select name="OE1">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>EE2353 Mini Project (1):</label>
+      <select name="EE2353">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>EE2354 Power Electronics Laboratory (2):</label>
+      <select name="EE2354">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <div><label>EE2355 Power System Simulation Laboratory (2):</label>
+      <select name="EE2355">
+        <option value="">--Grade--</option><option>O</option><option>A+</option>
+        <option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select></div>
+
+    <button type="submit">Calculate GPA</button>
+  </form>
+  <div id="result"></div>
+</main>
+<footer><p>© KCET</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

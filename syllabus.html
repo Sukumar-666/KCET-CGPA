@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KCET Syllabus Viewer</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #2e6dd1;
+    }
+
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #syllabusOutput {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>📖 Syllabus Viewer</h2>
+  <label>Year:
+    <select id="year">
+      <option value="1">1st Year</option>
+      <option value="2">2nd Year</option>
+    </select>
+  </label>
+  <label>Dept:
+    <select id="dept">
+      <option value="CSE">CSE</option>
+      <option value="ECE">ECE</option>
+    </select>
+  </label>
+  <label>Semester:
+    <select id="sem">
+      <option value="1">Semester 1</option>
+      <option value="2">Semester 2</option>
+    </select>
+  </label>
+  <button onclick="showSyllabus()">View</button>
+
+  <div id="syllabusOutput"></div>
+
+  <script>
+    function showSyllabus() {
+      const year = document.getElementById('year').value;
+      const dept = document.getElementById('dept').value;
+      const sem = document.getElementById('sem').value;
+
+      const output = document.getElementById('syllabusOutput');
+      output.innerHTML = `<h3>${dept} - Semester ${sem}</h3>
+        <ul>
+          <li>Subject 1 (4 credits)</li>
+          <li>Subject 2 (3 credits)</li>
+          <li>Subject 3 (3 credits)</li>
+          <li>Subject 4 (2 credits)</li>
+        </ul>`;
+    }
+  </script>
+</body>
+</html>

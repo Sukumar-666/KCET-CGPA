@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syllabus Viewer - KCET</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #f4f4f4; }
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .syllabus-box {
+      margin-top: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h2>📖 View Syllabus</h2>
+  <select id="year">
+    <option disabled selected>Select Year</option>
+    <option>1st Year</option>
+    <option>2nd Year</option>
+    <option>3rd Year</option>
+    <option>4th Year</option>
+  </select>
+  <select id="dept">
+    <option disabled selected>Select Department</option>
+    <option>CSE</option>
+    <option>ECE</option>
+    <option>EEE</option>
+    <option>MECH</option>
+    <option>CIVIL</option>
+  </select>
+  <select id="sem">
+    <option disabled selected>Select Semester</option>
+    <option>Semester 1</option>
+    <option>Semester 2</option>
+    <option>Semester 3</option>
+    <option>Semester 4</option>
+    <option>Semester 5</option>
+    <option>Semester 6</option>
+    <option>Semester 7</option>
+    <option>Semester 8</option>
+  </select>
+  <button onclick="viewSyllabus()">View</button>
+
+  <div class="syllabus-box" id="syllabus-content">
+    <!-- Syllabus content will appear here -->
+  </div>
+
+  <script>
+    function viewSyllabus() {
+      const year = document.getElementById("year").value;
+      const dept = document.getElementById("dept").value;
+      const sem = document.getElementById("sem").value;
+      const output = document.getElementById("syllabus-content");
+
+      // For demo purpose
+      output.innerHTML = `
+        <h3>${dept} - ${sem}</h3>
+        <ul>
+          <li>Mathematics</li>
+          <li>Programming in C</li>
+          <li>Digital Fundamentals</li>
+          <li>Engineering Graphics</li>
+        </ul>
+        <a href="https://syllabus.annauniv.edu/">🔗 View full syllabus on Anna University</a>
+      `;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semester 8 - GPA Calculator (EEE)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <h2>EEE - Semester 8 GPA Calculator</h2>
+</header>
+<main>
+  <form id="gradesForm">
+    <h3>Enter your grade</h3>
+
+    <div><label>EE2451 Project Work (10):</label>
+      <select name="EE2451">
+        <option value="">--Grade--</option>
+        <option>O</option><option>A+</option><option>A</option><option>B+</option><option>B</option><option>RA</option>
+      </select>
+    </div>
+
+    <button type="submit">Calculate GPA</button>
+  </form>
+  <div id="result"></div>
+</main>
+<footer><p>© KCET</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

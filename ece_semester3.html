@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECE - Semester 3 GPA Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h2>ECE - Semester 3 GPA Calculator</h2>
+  </header>
+
+  <main>
+    <form id="gradesForm">
+      <h3>Enter your grades</h3>
+
+      <div><label>MA2202 - Transforms and Numerical Solution of Equations (4):</label>
+        <select name="MA2202">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <div><label>AI2202 - Data Structures and Algorithms (3):</label>
+        <select name="AI2202">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <div><label>EC2205 - Circuit Analysis (3):</label>
+        <select name="EC2205">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <div><label>EC2206 - Electronic Devices (3):</label>
+        <select name="EC2206">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <div><label>EC2207 - Signals and Systems (3):</label>
+        <select name="EC2207">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <div><label>GE2201 - Design Thinking (3):</label>
+        <select name="GE2201">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <div><label>AI2203 - Data Structures and Algorithms Laboratory (2):</label>
+        <select name="AI2203">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <div><label>EC2208 - Circuits and Devices Laboratory (2):</label>
+        <select name="EC2208">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <div><label>EM2202 - Interpersonal Skills - Listening and Speaking (1):</label>
+        <select name="EM2202">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select></div>
+
+      <button type="submit">Calculate GPA</button>
+    </form>
+
+    <div id="result"></div>
+  </main>
+
+  <footer><p>© KCET</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

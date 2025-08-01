@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ECE - Semester 7 GPA Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h2>ECE - Semester 7 GPA Calculator</h2>
+  </header>
+
+  <main>
+    <form id="gradesForm">
+      <h3>Enter your grades</h3>
+
+      <div><label>EC2401 - Microprocessor and Embedded Systems (3):</label>
+        <select name="EC2401">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>GE2401 - Universal Human Values and Ethics (2):</label>
+        <select name="GE2401">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>Management Elective (3):</label>
+        <select name="ME">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>Open Elective II (3):</label>
+        <select name="OE2">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>Open Elective III (3):</label>
+        <select name="OE3">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>Open Elective IV (3):</label>
+        <select name="OE4">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>EC2402 - Microprocessor & Embedded Systems Lab (2):</label>
+        <select name="EC2402">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <button type="submit">Calculate GPA</button>
+    </form>
+
+    <div id="result"></div>
+  </main>
+
+  <footer><p>© KCET</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semester 7 - GPA Calculator (IT)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h2>IT - Semester 7 GPA Calculator</h2>
+  </header>
+  <main>
+    <form id="gradesForm">
+      <h3>Enter your grades</h3>
+
+      <div><label>GE2401 Universal Human Values and Ethics (2):</label>
+        <select name="GE2401">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>Management Elective (3):</label>
+        <select name="ME1">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>OE2 Open Elective II* (3):</label>
+        <select name="OE2">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>OE3 Open Elective III* (3):</label>
+        <select name="OE3">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>OE4 Open Elective IV* (3):</label>
+        <select name="OE4">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <div><label>IT2401 Project Development (1):</label>
+        <select name="IT2401">
+          <option value="">--Grade--</option><option>O</option><option>A+</option>
+          <option>A</option><option>B+</option><option>B</option><option>RA</option>
+        </select>
+      </div>
+
+      <button type="submit">Calculate GPA</button>
+    </form>
+    <div id="result"></div>
+  </main>
+  <footer><p>© KCET</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
