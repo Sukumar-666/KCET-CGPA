@@ -124,14 +124,14 @@
 <div id="page3" class="page" style="display: none;">
   <h3>Select Your Department</h3>
   <button onclick="selectDept('CSE')">CSE</button>
-  <button onclick="comingSoon()">IT</button>
-  <button onclick="comingSoon()">ECE</button>
-  <button onclick="comingSoon()">EEE</button>
-  <button onclick="comingSoon()">MECH</button>
-  <button onclick="comingSoon()">CIVIL</button>
+  <button onclick="selectDept('IT')">IT</button>
+  <button onclick="selectDept('ECE')">ECE</button>
+  <button onclick="selectDept('EEE')">EEE</button>
+  <button onclick="selectDept('MECH')">MECH</button>
+  <button onclick="selectDept('CIVIL')">CIVIL</button>
 </div>
 
-<!-- Page 4: Select Semester (for CSE only) -->
+<!-- Page 4: Select Semester -->
 <div id="page4" class="page" style="display: none;">
   <h3>Select Your Semester</h3>
   <div id="semesters"></div>
@@ -140,45 +140,81 @@
 <footer>
   <p>© KCET | Developed by Sukumar</p>
 </footer>
-
 <script>
-  let selectedYear = 1;
+    let selectedYear = 1;
+    let selectedDept = '';
 
-  function nextPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
-    document.getElementById(id).style.display = 'block';
-  }
+    function nextPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
 
-  function selectYear(year) {
-    selectedYear = year;
-    nextPage('page3');
-  }
+    function selectYear(year) {
+      selectedYear = year;
+      nextPage('page3');
+    }
 
-  function selectDept(dept) {
-    if (dept === 'CSE') {
+    function selectDept(dept) {
+      selectedDept = dept;
+
       const semesterMap = {
         1: ['Semester 1', 'Semester 2'],
         2: ['Semester 3', 'Semester 4'],
         3: ['Semester 5', 'Semester 6'],
         4: ['Semester 7', 'Semester 8']
       };
+
       const semDiv = document.getElementById('semesters');
       semDiv.innerHTML = '';
+
       semesterMap[selectedYear].forEach((sem, idx) => {
         const semIndex = (selectedYear - 1) * 2 + idx + 1;
         const btn = document.createElement('button');
         btn.innerText = sem;
-        btn.onclick = () => window.location.href = `semester${semIndex}.html`;
+
+        if (selectedYear === 1) {
+          // All depts → Common pages for Sem 1 & 2
+          btn.onclick = () => window.location.href = `semester${semIndex}.html`;
+        } else {
+          if (selectedDept === 'CSE') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          } 
+          else if (selectedDept == 'ECE') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          }
+          else if (selectedDept == 'IT') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          }
+          else if (selectedDept == 'EEE') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          }
+          /*else if (selectedDept == 'AIDS') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          }
+          else if (selectedDept == 'MTR') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          }
+          else if (selectedDept == 'BT') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          }
+          else if (selectedDept == 'CIVIL') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          }
+          else if (selectedDept == 'MECH') {
+            btn.onclick = () => window.location.href = `${selectedDept.toLowerCase()}_semester${semIndex}.html`;
+          }*/
+          else {
+            btn.onclick = () => alert("Coming Soon for " + selectedDept + " - Semester " + semIndex);
+          }
+        }
+
         semDiv.appendChild(btn);
       });
+
       nextPage('page4');
     }
-  }
+  </script>
 
-  function comingSoon() {
-    alert("Coming soon...");
-  }
-</script>
 
 </body>
 </html>
