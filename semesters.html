@@ -1,31 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Select Semester - CSE</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Semesters - KCET</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    main {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+
+    select {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 8px;
+      border: 1px solid #aaa;
+    }
+
+    .cgpaclick {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .cgpaclick:hover {
+      background-color: #006fe6;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-<header class="header">
-  <h2>CSE - Select Semester</h2>
-</header>
+
 <main>
-  <div class="sem-list">
-    <button onclick="selectSemester(1)">Semester 1</button>
-    <button onclick="selectSemester(2)">Semester 2</button>
-    <button onclick="selectSemester(3)">Semester 3</button>
-    <button onclick="selectSemester(4)">Semester 4</button>
-    <button onclick="selectSemester(5)">Semester 5</button>
-    <button onclick="selectSemester(6)">Semester 6</button>
-    <button onclick="selectSemester(7)">Semester 7</button>
-    <button onclick="selectSemester(8)">Semester 8</button>
-  </div>
+  <h2>KCET GPA Calculator</h2>
+
+  <!-- Select Year -->
+  <select id="year" onchange="updateSemesterOptions()">
+    <option value="">--Select Year--</option>
+    <option value="1">1st Year</option>
+    <option value="2">2nd Year</option>
+    <option value="3">3rd Year</option>
+    <option value="4">4th Year</option>
+  </select>
+
+  <!-- Select Semester -->
+  <select id="semester" onchange="navigateToSemester()">
+    <option value="">--Select Semester--</option>
+  </select>
+
+  <br><br>
+  <button class="cgpaclick" onclick="location.href='cgpa.html'">Calculate CGPA</button>
+
+  <footer><p>© KCET Scholar Sync</p></footer>
 </main>
 
-<button class="cgpaclick" onclick="location.href='cgpa.html'">Calculate CGPA</button>
+<script>
+  let selectedYear = 1;
+  let selectedDept = '';
 
-<footer><p>© KCET</p></footer>
-<script src="script.js"></script>
+  function nextPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function selectYear(year) {
+    selectedYear = year;
+    nextPage('page3');
+  }
+
+  function selectDept(dept) {
+    selectedDept = dept;
+
+    const semesterMap = {
+      1: ['Semester 1', 'Semester 2'],
+      2: ['Semester 3', 'Semester 4'],
+      3: ['Semester 5', 'Semester 6'],
+      4: ['Semester 7', 'Semester 8']
+    };
+
+    const semDiv = document.getElementById('semesters');
+    semDiv.innerHTML = '';
+
+    semesterMap[selectedYear].forEach((sem, idx) => {
+      const semIndex = (selectedYear - 1) * 2 + idx + 1;
+      const btn = document.createElement('button');
+      btn.innerText = sem;
+
+      if (selectedYear === 1) {
+        // All departments use same pages for 1st year
+        btn.onclick = () => window.location.href = `semester${semIndex}.html`;
+      } else {
+        // For Year > 1, support CSE and ECE now
+        const lowerDept = selectedDept.toLowerCase();
+        const validDepts = ['cse', 'ece'];
+
+        if (validDepts.includes(lowerDept)) {
+          btn.onclick = () => window.location.href = `semester${semIndex}.html`;
+        } else {
+          btn.onclick = () => alert("Coming Soon for " + selectedDept + " - Semester " + semIndex);
+        }
+      }
+
+      semDiv.appendChild(btn);
+    });
+
+    nextPage('page4');
+  }
+</script>
+
+
 </body>
 </html>
